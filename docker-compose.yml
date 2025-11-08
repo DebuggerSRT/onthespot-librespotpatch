@@ -1,0 +1,11 @@
+services:
+ onthespot-webui:
+    image: onthespot-webui
+    container_name: onthespot-webui
+    restart: unless-stopped
+    ports:
+     - 5000:5000
+    volumes:
+    - ./Music:/root/Music/OnTheSpot
+    - ./Videos:/root/Videos/OnTheSpot
+    - ./Config:/root/.config/onthespot
